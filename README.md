@@ -1,11 +1,8 @@
 # ETUDIANT EXPRESS CRUD APP 
-[![NPM Version][npm-version-image]][npm-url]
-
-[![NPM Downloads][npm-downloads-image]][npm-url]
-
-[![Build Status][ci-image]][ci-url]
-
-[![Test Coverage][coveralls-image]][coveralls-url]
+[![npm version](https://img.shields.io/npm/v/npm.svg)](https://npm.im/npm)
+[![license](https://img.shields.io/npm/l/npm.svg)](https://npm.im/npm)
+[![CI - cli](https://github.com/npm/cli/actions/workflows/ci.yml/badge.svg)](https://github.com/npm/cli/actions/workflows/ci.yml)
+[![Benchmark Suite](https://github.com/npm/cli/actions/workflows/benchmark.yml/badge.svg)](https://github.com/npm/cli/actions/workflows/benchmark.yml)
 
 Ceci est projet express-Mongo avec les opérations de base sur etudiants
 
@@ -37,5 +34,9 @@ Ceci est projet express-Mongo avec les opérations de base sur etudiants
     ````
 ## Usage
 
-Lancez le projet sur l'endpoints `http://localhost:3000/api/etudiants`
+Lancez le projet avec la commande en mode développeur
+    ````
+        npm run start:dev
+    ````
+l'endpoints `http://localhost:3000/api/etudiants`
 
