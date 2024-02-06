@@ -53,4 +53,48 @@ router.post('/',
         }
     }
 )
+
+/**
+ * Delete student by email  http://localhost:3000/api/etudiants/{email}
+ */
+router.delete(
+    '/:email',
+    async(req,res) =>{
+      const  {email} = req.params; 
+      const deleteStudent = await etudiant.findOneAndDelete(email===email);
+        if(!deleteStudent) {
+            res.status(404).send({msg: "Student not found"});   
+        }else{
+            res.status(202).send({msg: "Deleted successfully"});
+        }
+    }
+)
+
+/**
+ * Update Student by email http://localhost:3000/api/etudiants/{email}
+ */
+router.put(
+    "/:email", async(req,res)=>{
+        const {email}   = req.params;
+        
+        const existStudent = await etudiant.findOne({
+            $or:[{email}]
+        }
+        );
+        if(existStudent){
+            const {  telephone,nom_complet, classe} = req.body;
+            const updateStudent = await etudiant.updateMany({telephone,nom_complet,classe});
+            res.status(200).send(
+                {
+                    msg:"Student's datas updated successfully",
+                    data:{  telephone,nom_complet, classe,email}
+                }
+            );
+        }else{
+            res.status(400).send({msg: `Bad Request!!! Student with provided email ${email} was not found` });
+        }
+
+       
+    }
+)
 module.exports = router;

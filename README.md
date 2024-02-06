@@ -64,7 +64,7 @@ Lancez le projet avec la commande en mode développeur et tapez  `http://localho
 #### Ajout nouvel étudiant statut code `201` Created
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/new_student.png)
 #### Contrainte de validation email Unique 
-Exception level pour un statut code 400 Bad request sur un ajout d'un nouvel utilisateur
+Exception levé pour un statut code `400` Bad request sur un ajout d'un nouvel utilisateur
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/contrainte_unique_email.png)
 ### Find by Email
 #### Succès avec statut code `200` OK
@@ -72,5 +72,22 @@ Exception level pour un statut code 400 Bad request sur un ajout d'un nouvel uti
     http://localhost:3000/api/etudiants/{email}
 ```````
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/find_by_email.png)
-#### Exception  Not Found statut code `404`
+####  Not Found  exception avec statut code `404`
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/student_not_found.png)
+### DELETE Eduiant par email statut code `204` `no content`
+```````
+    http://localhost:3000/api/etudiants/{email}
+```````
+![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/delete-student-by-email.png)
+#### Requête GET all student after 
+![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/after-delete.png)
+#### Exception lévée avec un statut code `400` 
+![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/404-for-delete.png)
+404-for-delete 
+### PUT modification d'un étudiant par email
+```````
+    http://localhost:3000/api/etudiants/{email}
+```````
+![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/put-success.png)
+#### Email introuvable ou erreur du Update statut code `400` est envoyé
+![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/put-failed.png)
