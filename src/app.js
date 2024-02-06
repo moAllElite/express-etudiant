@@ -8,7 +8,7 @@ const { connect_string } = require('./database/database_config');// CONNECTION S
 
 
 app.use(express.json());
-app.use("/api/etudiants",studentRoute); //default url http:localhost:3000/api/etudiant
+app.use(process.env.URL,studentRoute); //default url http:localhost:3000/api/etudiant
 
 
 app.listen(process.env.PORT,()=>
