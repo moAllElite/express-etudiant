@@ -1,8 +1,9 @@
 # ETUDIANT EXPRESS CRUD APP 
 [![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/npm/v/10.2.4#npm---a-javascript-package-manager)
 [![license](https://img.shields.io/npm/l/npm.svg)](https://npm.im/npm)
-[![CI - cli](https://github.com/npm/cli/actions/workflows/ci.yml/badge.svg)](https://github.com/npm/cli/actions/workflows/ci.yml)
-[![Benchmark Suite](https://github.com/npm/cli/actions/workflows/benchmark.yml/badge.svg)](https://github.com/npm/cli/actions/workflows/benchmark.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=moAllElite_express-etudiant&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=moAllElite_express-etudiant)
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=moAllElite_express-etudiant)](https://sonarcloud.io/summary/new_code?id=moAllElite_express-etudiant)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=moAllElite_express-etudiant)
 
 Ceci est projet express-Mongo avec les opérations de base sur etudiants
 
@@ -49,7 +50,8 @@ Lancez le projet avec la commande en mode développeur et tapez  `http://localho
     ````````
         npm run start:dev
     ````````
-
+### Analyse qualité code avec SonarCloud
+![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/sonar.png)
 
 ### GET all students
 ```````
