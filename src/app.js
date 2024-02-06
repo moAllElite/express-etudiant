@@ -1,14 +1,11 @@
-var express = require('express');
+let express = require('express');
 const app = express();
 const uri =  require("./database/database_config");
 require('dotenv').config() // import env configs
 const studentRoute = require('./routes/etudiant'); //import all routes from etudiant.js
-var { connect_string } = require('./database/database_config');// CONNECTION STRING
+const { connect_string } = require('./database/database_config');// CONNECTION STRING
 
 
-
-
-connect_string;
 
 app.use(express.json());
 app.use("/api/etudiants",studentRoute); //default url http:localhost:3000/api/etudiant
