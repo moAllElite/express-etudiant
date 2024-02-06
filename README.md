@@ -52,6 +52,8 @@ Lancez le projet avec la commande en mode développeur et tapez  `http://localho
 ### Analyse qualité code avec SonarCloud
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/sonar.png)
 
+![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/sonar-tab.png)
+
 ### GET all students
 ```````
     http://localhost:3000/api/etudiants
