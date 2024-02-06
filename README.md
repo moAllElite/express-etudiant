@@ -61,16 +61,16 @@ Lancez le projet avec la commande en mode développeur et tapez  `http://localho
 ```````
     http://localhost:3000/api/etudiants
 ```````
-#### Ajout nouvel étudiant statut code 201 Created
+#### Ajout nouvel étudiant statut code `201` Created
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/new_student.png)
 #### Contrainte de validation email Unique 
 Exception level pour un statut code 400 Bad request sur un ajout d'un nouvel utilisateur
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/contrainte_unique_email.png)
 ### Find by Email
-#### Succès avec statut code 200 OK
+#### Succès avec statut code `200` OK
 ```````
     http://localhost:3000/api/etudiants/{email}
 ```````
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/find_by_email.png)
-#### Exception  Not Found statut code 404
+#### Exception  Not Found statut code `404`
 ![Alt text](https://github.com/moAllElite/express-etudiant/blob/main/src/assets/student_not_found.png)
