@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
 const EtudiantSchema = mongoose.Schema({
-    nomComplet: {
+
+    telephone:{
         type: mongoose.SchemaTypes.String,
         require:true,  
     },
-    telephone:{
+    nom_complet: {
         type: mongoose.SchemaTypes.String,
         require:true,  
     },
@@ -18,11 +19,9 @@ const EtudiantSchema = mongoose.Schema({
         require:true,  
     },
     createdAt: {
-        
             type: mongoose.SchemaTypes.Date,
             require:true,  
             default:new Date(),
-        
     },
 
 });

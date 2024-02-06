@@ -1,7 +1,6 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 require('dotenv').config();
 const mongoose = require('mongoose');
-const SECRET =  require("./constant");
 
 const    uri = process.env.DATABASE_URL;
 

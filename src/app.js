@@ -1,9 +1,9 @@
 var express = require('express');
 const app = express();
-const uri =  require("../database_config");
+const uri =  require("./database/database_config");
 require('dotenv').config() // import env configs
 const studentRoute = require('./routes/etudiant'); //import all routes from etudiant.js
-var { connect_string } = require('../database_config');// CONNECTION STRING
+var { connect_string } = require('./database/database_config');// CONNECTION STRING
 
 
 
