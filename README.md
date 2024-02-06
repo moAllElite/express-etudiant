@@ -1,6 +1,5 @@
 # ETUDIANT EXPRESS CRUD APP 
 [![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/npm/v/10.2.4#npm---a-javascript-package-manager)
-[![license](https://img.shields.io/npm/l/npm.svg)](https://npm.im/npm)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=moAllElite_express-etudiant&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=moAllElite_express-etudiant)
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=moAllElite_express-etudiant)](https://sonarcloud.io/summary/new_code?id=moAllElite_express-etudiant)
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=moAllElite_express-etudiant)

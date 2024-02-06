@@ -6,7 +6,7 @@ const EtudiantSchema = mongoose.Schema({
         type: mongoose.SchemaTypes.String,
         require:[true,'User phone number required'],  
         validator:(v) => {
-            return  /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s/0-9]*$/g.test(v);
+            return  /^[+]*[(]?[0-9]?[)]?[-\s/0-9]*$/g.test(v);
           },
           message: props => `${props.value} is not a valid phone number!`
     },
