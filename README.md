@@ -10,7 +10,10 @@ Ceci est projet express-Mongo avec les opérations de base sur etudiants
 Pour l'installation du gestionnaire de dépendance `npm` vous aurez besoin d'une des versions suivante de Node.js :
 -   18.x.x >= 18.17.0
 -   20.5.0 our supérieure
-## Installation de packages
+## Installation de Node Js
+Rendez vous sur le site officiel de Node js pour le téléchargement
+`https://nodejs.org/en`
+## Installation des packages
 -   Initialiser le projet express
 
      ```````
