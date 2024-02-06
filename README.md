@@ -1,4 +1,4 @@
-&# ETUDIANT EXPRESS CRUD APP 
+# ETUDIANT EXPRESS CRUD APP 
 [![npm version](https://img.shields.io/npm/v/npm.svg)](https://www.npmjs.com/package/npm/v/10.2.4#npm---a-javascript-package-manager)
 [![license](https://img.shields.io/npm/l/npm.svg)](https://npm.im/npm)
 [![CI - cli](https://github.com/npm/cli/actions/workflows/ci.yml/badge.svg)](https://github.com/npm/cli/actions/workflows/ci.yml)
