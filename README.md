@@ -3,6 +3,7 @@ Ceci est projet express-Mongo avec les opérations de base sur etudiants
 
 ## Configuration
 -   Initialiser le projet express
+
      ```
         npm init
     ```
@@ -18,6 +19,10 @@ Ceci est projet express-Mongo avec les opérations de base sur etudiants
     ```
         npm install mongoose --save
     ```
+-  Installer mongodb la document est disponible sur [docs](https://cloud.mongodb.com/)
+    ```
+        npm install mongodb --save
+    ````
 
 ## Usage
 
