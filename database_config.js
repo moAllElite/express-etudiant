@@ -3,7 +3,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const SECRET =  require("./constant");
 
-const    uri = process.env.DATABASE_USER+SECRET+ process.env.DATABASE_HOST;
+const    uri = process.env.DATABASE_URL;
 
 let connect_string =  mongoose
         .connect(uri)
