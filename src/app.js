@@ -7,8 +7,13 @@ const { connect_string } = require('./database/database_config');// CONNECTION S
 
 
 
+const cors = require('cors');
+const {disabled_cors} = require('./config/cors_config')//disable CORS
+appli.use(cors(disabled_cors));
 appli.use(express.json());
+
 appli.use(process.env.URL,studentRoute); //default url http:localhost:3000/api/etudiant
+
 
 
 appli.listen(process.env.PORT,()=>

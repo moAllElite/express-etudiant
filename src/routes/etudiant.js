@@ -40,14 +40,14 @@ router.get(
 
 router.post('/',
     async(req,res)=>{
-        const {  telephone,nom_complet,email, classe} = req.body;
+        const {telephone,nom_complet,email, classe} = req.body;
         const userDB = await etudiant.findOne({ 
             $or:[{email}]
         });
         if(userDB){
             res.status(400).send({msg:"Student already exist"})
         }else{
-            const newUser = await etudiant.create( {  telephone,nom_complet,email, classe});
+            const newUser = await etudiant.create({telephone,nom_complet,email, classe});
             newUser.save();
             res.status(201).send({msg: "Student created successfuly"})
         }
@@ -82,7 +82,7 @@ router.put(
         }
         );
         if(existStudent){
-            const {  telephone,nom_complet, classe} = req.body;
+            const { telephone,nom_complet, classe} = req.body;
             const updateStudent = await etudiant.updateMany({telephone,nom_complet,classe});
             res.status(200).send(
                 {
