@@ -4,4 +4,4 @@ node_modules
 
 # Keep cors disable out of version control
 
-src\config\cors_config.js
+src/config/cors_config.js
