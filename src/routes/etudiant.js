@@ -14,14 +14,27 @@ router.get(
       
         const { email } = req.params;
         if(await etudiant.exists({ email: email })){
-            const uno =await  etudiant.findOne({email:email}).exec();
+            const uno = await  etudiant.findOne({email:email}).exec();
             res.send(uno);
         }else{
             res.status(404).send({msg:"Student not found"});
         }
                     
 });
-
+/**
+ *  GET STUDENT BY ID
+ */
+router.get(
+    '/:id',async(req,res)=>{
+        const {id} = req.params;
+        if(await etudiant.exists({id:id})){
+                const existStudent = await etudiant.findOne({id:id}).exec();
+                res.sendStatus(200).send(existStudent);
+        } else{
+            res.status(404).send({msg:"Student not found"});
+        }
+    }
+)
 /**
  * Get all students
  */
