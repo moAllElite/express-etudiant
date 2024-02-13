@@ -25,11 +25,11 @@ router.get(
  *  GET STUDENT BY ID
  */
 router.get(
-    '/:id',async(req,res)=>{
-        const {id} = req.params;
-        if(await etudiant.exists({id:id})){
-                const existStudent = await etudiant.findOne({id:id}).exec();
-                res.sendStatus(200).send(existStudent);
+    '/find-by/:_id',async(req,res)=>{
+        const {_id} = req.params;
+        if(await etudiant.exists({_id:_id})){
+                const existStudent = await etudiant.findOne({_id:_id});
+                res.send(existStudent);
         } else{
             res.status(404).send({msg:"Student not found"});
         }
