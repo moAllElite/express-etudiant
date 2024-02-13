@@ -6,6 +6,8 @@
 
 Ceci est projet express-Mongo avec les opérations de base sur etudiants
 
+Project front-end disponible [ici](https://github.com/moAllElite/mean-etudiant-frontend)
+
 ## Configuration mininum requise
 Pour l'installation du gestionnaire de dépendance `npm` vous aurez besoin d'une des versions suivante de Node.js :
 -   18.x.x >= 18.17.0
