@@ -68,21 +68,24 @@ router.post('/',
 )
 
 /**
- * Delete student by email  http://localhost:3000/api/etudiants/{email}
+ * Delete student by email
+ * @param {string} email - email of the student to be deleted
+ * @returns {{ msg: string; }} - an object containing a message
  */
-router.delete(
-    '/:email',
-    async(req,res) =>{
-      const  {email} = req.params; 
-      const deleteStudent = await etudiant.findOneAndDelete(email===email);
-        if(!deleteStudent) {
-            res.status(404).send({msg: "Student not found"});   
-        }else{
-            res.status(202).send({msg: "Deleted successfully"});
-        }
+async (req, res) => {
+    const { email } = req.params;
+  
+    const deleteStudent = await etudiant.findOne({ email }).exec();
+  
+    if (!deleteStudent) {
+      return res.status(404).send({ msg: 'Student not found' });
     }
-)
+  
+    await etudiant.findOneAndDelete({ email });
+    return res.status(202).send({ msg: 'Deleted successfully' });
+  };
 
+  
 /**
  * Update Student by email http://localhost:3000/api/etudiants/{email}
  */
