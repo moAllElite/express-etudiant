@@ -85,7 +85,6 @@ async (req, res) => {
   
     await etudiant.findOneAndDelete({ email });
     return res.status(202).send({ msg: 'Deleted successfully' ,status_code:res.statusMessage,timeStamp:new Date()});
-    return res.status(202).send({ msg: 'Deleted successfully' ,status_code:res.statusMessage,timeStamp:new Date()});
   }
 );
   
