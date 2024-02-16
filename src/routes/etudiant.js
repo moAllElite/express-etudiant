@@ -3,7 +3,8 @@ const { Router } = require('express');
 const router = Router();
 
 
-const etudiant = require('../database/schema/Etudiant-schema')
+const etudiant = require('../database/schema/Etudiant-schema');
+const { timeStamp } = require('console');
 
 /**
  * Get student by email http://localhost:3000/etudiant/email
@@ -17,7 +18,7 @@ router.get(
             const uno = await  etudiant.findOne({email:email}).exec();
             res.send(uno);
         }else{
-            res.status(404).send({msg:"Student not found"});
+            res.status(404).send({msg:"Student not found",status_code:res.statusCode,timeStamp:new Date()});
         }
                     
 });
@@ -31,7 +32,7 @@ router.get(
                 const existStudent = await etudiant.findOne({_id:_id});
                 res.send(existStudent);
         } else{
-            res.status(404).send({msg:"Student not found"});
+            res.status(404).send({msg:"Student not found",status_code:res.statusCode,timeStamp:new Date   ()});
         }
     }
 )
@@ -58,11 +59,11 @@ router.post('/',
             $or:[{email}]
         });
         if(userDB){
-            res.status(400).send({msg:"Student already exist"})
+            res.status(400).send({msg:"Student already exist",status_code:res.statusCode,timeStamp:new Date()});
         }else{
             const newUser = await etudiant.create({telephone,nom_complet,email, classe});
             newUser.save();
-            res.status(201).send({msg: "Student created successfuly"})
+            res.status(201).send({msg: "Student created successfuly",status_code:res.statusCode})
         }
     }
 )
@@ -72,19 +73,21 @@ router.post('/',
  * @param {string} email - email of the student to be deleted
  * @returns {{ msg: string; }} - an object containing a message
  */
+router.delete('/:email',
 async (req, res) => {
     const { email } = req.params;
   
     const deleteStudent = await etudiant.findOne({ email }).exec();
   
     if (!deleteStudent) {
-      return res.status(404).send({ msg: 'Student not found' });
+      return res.status(404).send({ msg: 'Student not found',status_code:res.statusCode ,timeStamp:new Date()});
     }
   
     await etudiant.findOneAndDelete({ email });
-    return res.status(202).send({ msg: 'Deleted successfully' });
-  };
-
+    return res.status(202).send({ msg: 'Deleted successfully' ,status_code:res.statusMessage,timeStamp:new Date()});
+    return res.status(202).send({ msg: 'Deleted successfully' ,status_code:res.statusMessage,timeStamp:new Date()});
+  }
+);
   
 /**
  * Update Student by email http://localhost:3000/api/etudiants/{email}
@@ -107,7 +110,7 @@ router.put(
                 }
             );
         }else{
-            res.status(400).send({msg: `Bad Request!!! Student with provided email ${email} was not found` });
+            res.status(400).send({msg: `Bad Request!!! Student with provided email ${email} was not found`,status_code:res.statusCode,timeStamp:new Date() });
         }
 
        
