@@ -71,7 +71,7 @@ router.post('/',
 /**
  * Delete student by email
  * @param {string} email - email of the student to be deleted
- * @returns {{ msg: string; }} - an object containing a message
+ * @returns {{ msg: string; ,status_code:number; timeStamp:Date}} - an object containing a message
  */
 router.delete('/:email',
 async (req, res) => {
@@ -84,7 +84,7 @@ async (req, res) => {
     }
   
     await etudiant.findOneAndDelete({ email });
-    return res.status(202).send({ msg: 'Deleted successfully' ,status_code:res.statusMessage,timeStamp:new Date()});
+    return res.status(202).send({ msg: 'Deleted successfully' ,status_code:res.statusCode,timeStamp:new Date()});
   }
 );
   
